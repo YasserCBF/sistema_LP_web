@@ -1,0 +1,16 @@
+/* src/components/Tables/MyRequestsTable.module.css */
+.tableContainer { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 0.75rem; border-bottom: 1px solid #ddd; }
+.table th { background: #f8f9fa; }
+
+.estado {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.pendiente { background: #fff3cd; color: #856404; }
+.aprobado { background: #d4edda; color: #155724; }
+.rechazado { background: #f8d7da; color: #721c24; }
+.devuelto { background: #d1ecf1; color: #0c5460; }

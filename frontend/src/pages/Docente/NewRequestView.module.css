@@ -1,0 +1,15 @@
+/* src/pages/Docente/NewRequestView.module.css */
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #666;
+  margin-bottom: 2rem;
+}

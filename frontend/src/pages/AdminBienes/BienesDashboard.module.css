@@ -1,0 +1,14 @@
+/* src/pages/AdminBienes/BienesDashboard.module.css */
+.dashboard { padding: 2rem; }
+.stats { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 1.5rem; 
+  margin-top: 2rem; 
+}
+.card { 
+  background: #e3f2fd; 
+  padding: 1.5rem; 
+  border-radius: 8px; 
+  text-align: center; 
+}

@@ -1,25 +1,45 @@
-/* src/pages/Docente/DocenteDashboard.module.css */
-.dashboard {
+.container {
+  background: linear-gradient(135deg, #f8d7da 0%, #d5f5e3 100%);
+  min-height: 100vh;
   padding: 2rem;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+.header {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 1.8rem;
+  color: #d63384;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  color: #28a745;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0;
 }
 
 .card {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 2rem;
-  color: #2c3e50;
+  color: #20c997;
+  margin-bottom: 1rem;
 }

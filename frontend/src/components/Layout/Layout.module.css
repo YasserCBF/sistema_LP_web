@@ -1,89 +1,137 @@
-/* src/components/Layout/Layout.module.css */
-.layout {
+.layout { display: flex; min-height: 100vh; font-family: 'Inter', sans-serif; }
+
+/* === SIDEBAR COMÚN === */
+.sidebar {
+  width: 280px;
+  background: white;
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.08);
+  position: fixed;
+  height: 100%;
+  z-index: 10;
+  border-right: 1px solid #eee;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  padding: 8px;
+  background: white;
+  border: 3px solid #10b981;
+  box-shadow: 0 6px 15px rgba(16,185,129,0.2);
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.navItem {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.9rem 1.1rem;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.navItem:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.navItem.active {
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === MAIN === */
+.main {
+  margin-left: 280px;
+  flex: 1;
+  padding: 2.5rem;
 }
 
 .header {
-  background: #2c3e50;
-  color: white;
-  padding: 1rem 2rem;
+  background: white;
+  padding: 1.75rem 2.25rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.header h1 {
+.pageTitle {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
 }
 
-.userInfo {
+.welcome {
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.logout {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 0.9rem;
-}
-
-.userInfo button {
-  background: #e74c3c;
+  gap: 0.5rem;
+  background: #ef4444;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 0.85rem;
+  transition: all 0.25s ease;
 }
 
-.userInfo button:hover {
-  background: #c0392b;
-}
-
-.main {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 250px;
-  background: #34495e;
-  padding: 1.5rem 1rem;
-  overflow-y: auto;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin-bottom: 0.5rem;
-}
-
-.sidebar a {
-  color: #ecf0f1;
-  text-decoration: none;
-  display: block;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  transition: all 0.2s;
-}
-
-.sidebar a:hover,
-.sidebar a.active {
-  background: #465c71;
-  color: white;
-  font-weight: 500;
+.logout:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
 }
 
 .content {
-  flex: 1;
-  padding: 2rem;
-  background: #f8f9fa;
-  overflow-y: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 2.25rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  min-height: calc(100vh - 300px);
 }
+
+/* === TEMAS POR ROL === */
+.docente {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+.docente .navItem.active { background: #10b981; color: white; }
+.docente .welcome { color: #10b981; }
+
+.adminb {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+.adminb .navItem.active { background: #475569; color: white; }
+.adminb .welcome { color: #475569; }
+
+.adminl {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+.adminl .navItem.active { background: #f59e0b; color: white; }
+.adminl .welcome { color: #f59e0b; }

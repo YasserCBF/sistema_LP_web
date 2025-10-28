@@ -1,14 +1,38 @@
-/* src/pages/AdminBiblioteca/BibliotecaDashboard.module.css */
-.dashboard { padding: 2rem; }
-.stats { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 1.5rem; 
-  margin-top: 2rem; 
+.container {
+  background: linear-gradient(135deg, #fff3cd 0%, #d1ecf1 100%);
+  min-height: 100vh;
+  padding: 2rem;
 }
-.card { 
-  background: #f3e5f5; 
-  padding: 1.5rem; 
-  border-radius: 8px; 
-  text-align: center; 
+
+.header {
+  background: linear-gradient(135deg, #fd7e14, #17a2b8);
+  color: white;
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  border-top: 4px solid #ffc107;
+}
+
+.card h3 {
+  color: #fd7e14;
+  font-weight: 600;
 }
